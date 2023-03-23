@@ -1,0 +1,56 @@
+.footer_container {
+  margin-top: 80px;
+  background: var(--border_color);
+  padding: 20px;
+  a {
+    cursor: pointer !important;
+    transition: all 0.3s ease-in-out !important;
+
+    &:hover {
+      text-decoration: underline !important;
+      color: var(--main_color) !important;
+    }
+  }
+  .footer-inner {
+    display: flex;
+    margin-top: 20px;
+    gap: 10px;
+
+    ul:first-child {
+      width: 45%;
+    }
+  }
+
+  .google_play,
+  .apple_store {
+    width: 140px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 10px;
+    margin-top: 15px;
+    border-radius: var(--border_radius_btn);
+    background-color: black;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    &:hover {
+      background-color: var(--main_color);
+    }
+    a {
+      color: white !important;
+      font-size: 13px !important;
+      text-decoration: none !important;
+      i {
+        color: white;
+        margin-right: 4px !important;
+        font-size: 18px;
+      }
+    }
+  }
+}
+.rights {
+  background-color: var(--main_color);
+  text-align: center;
+  font-weight: 500;
+}

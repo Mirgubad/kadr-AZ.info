@@ -1,0 +1,57 @@
+.header {
+  padding: 20px;
+  ul {
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+  }
+  button {
+    padding: 10px 15px;
+    border: none;
+    color: white;
+    border-radius: var(--border_radius_btn);
+    font-weight: 300;
+    border: 1px solid transparent;
+    transition: all 0.3s ease-in-out;
+  }
+  #add_btn {
+    background-color: var(--main_color);
+    &:hover {
+      background: transparent;
+      color: var(--main_color);
+      border-color: var(--main_color);
+    }
+  }
+  #search_btn {
+    background-color: rgb(201, 204, 202);
+
+    &:hover {
+      background: white;
+      color: black;
+      border-color:rgb(201, 204, 202);
+    }
+  }
+
+  .logo {
+    font-size: 30px !important;
+    font-weight: 700 !important;
+    cursor: pointer !important;
+    span {
+      color: var(--main_color);
+    }
+  }
+}
+
+.change_theme {
+  background-color: rgb(201, 204, 202);
+
+  i {
+    font-size: 20px;
+  }
+
+  &:hover {
+    background: white;
+    color: black;
+    border-color:rgb(201, 204, 202);
+  }
+}

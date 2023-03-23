@@ -1,0 +1,32 @@
+@import "_header.scss";
+@import "_search_panel.scss";
+@import "_vacancies.scss";
+@import "_navigation_pages.scss";
+@import "_footer";
+:root {
+  --main_color: rgb(19, 241, 19);
+  --border_radius_btn: 10px;
+  --font_family: "Montserrat", sans-serif;
+  --border_color: rgb(228, 228, 228);
+}
+* {
+  padding: 0;
+  margin: 0;
+  font-family: var(--font_family);
+  box-sizing: border-box;
+}
+
+::selection{
+  color: black;
+  background: var(--main_color);
+}
+a {
+  all: unset !important;
+}
+ul {
+  list-style: none;
+}
+
+.dark_body{
+ background-color: rgb(14, 14, 26);
+}

@@ -1,0 +1,383 @@
+.header {
+  padding: 20px;
+}
+.header ul {
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+}
+.header button {
+  padding: 10px 15px;
+  border: none;
+  color: white;
+  border-radius: var(--border_radius_btn);
+  font-weight: 300;
+  border: 1px solid transparent;
+  transition: all 0.3s ease-in-out;
+}
+.header #add_btn {
+  background-color: var(--main_color);
+}
+.header #add_btn:hover {
+  background: transparent;
+  color: var(--main_color);
+  border-color: var(--main_color);
+}
+.header #search_btn {
+  background-color: rgb(201, 204, 202);
+}
+.header #search_btn:hover {
+  background: white;
+  color: black;
+  border-color: rgb(201, 204, 202);
+}
+.header .logo {
+  font-size: 30px !important;
+  font-weight: 700 !important;
+  cursor: pointer !important;
+}
+.header .logo span {
+  color: var(--main_color);
+}
+
+.change_theme {
+  background-color: rgb(201, 204, 202);
+}
+.change_theme i {
+  font-size: 20px;
+}
+.change_theme:hover {
+  background: white;
+  color: black;
+  border-color: rgb(201, 204, 202);
+}
+
+.search_panel .search {
+  background-color: var(--main_color);
+  border-radius: var(--border_radius_btn);
+  display: none;
+}
+.search_panel .search .search-container {
+  width: 100%;
+  text-align: center;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.search_panel .search form {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.search_panel .search form select, .search_panel .search form input, .search_panel .search form button {
+  padding: 10px 20px;
+}
+.search_panel .search form select, .search_panel .search form input, .search_panel .search form button {
+  border-radius: var(--border_radius_btn);
+  border: none;
+  outline: none;
+}
+.search_panel .search form button:hover {
+  background: white;
+  color: black;
+}
+.search_panel h4 {
+  position: relative;
+}
+.search_panel h4::after {
+  content: "";
+  position: absolute;
+  border: 1.5px solid var(--main_color);
+  height: 30px;
+  left: -10px;
+}
+.search_panel .slick-section {
+  padding: 25px;
+  text-align: center;
+  overflow: hidden;
+}
+.search_panel .slick-section .slick-container {
+  position: relative;
+}
+.search_panel .slick-section .slick-wrap {
+  margin: 0 -10px;
+}
+.search_panel .slick-section .slick-wrap .slick-item {
+  padding: 15px;
+  height: 200px;
+}
+.search_panel .slick-section .slick-wrap .slick-item a {
+  cursor: pointer !important;
+}
+.search_panel .slick-section .slick-wrap .slick-inner {
+  border-radius: var(--border_radius_btn);
+  border: 1.5px solid rgb(228, 228, 228);
+  padding: 20px;
+  font-size: 13px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
+  line-height: 15px;
+}
+.search_panel .slick-section .slick-wrap .slick-inner i {
+  background-color: var(--main_color);
+  width: 50px;
+  height: 50px;
+  color: white;
+  display: flex;
+  font-size: 19px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+.search_panel .slick-section .slick-wrap .slick-prev,
+.search_panel .slick-section .slick-wrap .slick-next {
+  position: absolute !important;
+  all: unset;
+  font-size: 25px;
+  background-color: white;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9;
+  top: 42%;
+  cursor: pointer;
+  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+}
+.search_panel .slick-section .slick-wrap .slick-prev {
+  left: 0;
+}
+.search_panel .slick-section .slick-wrap .slick-next {
+  right: 0;
+}
+.search_panel .slick-section .slick-wrap .slick-track {
+  display: flex;
+}
+.search_panel .slick-section .slick-dots {
+  list-style-type: none;
+  margin: 25px 0 0;
+  padding: 0;
+}
+.search_panel .slick-section .slick-dots li {
+  width: auto;
+  height: auto;
+  display: inline-block;
+  padding: 0 5px;
+}
+.search_panel .slick-section .slick-dots li button {
+  width: auto;
+  height: auto;
+  padding: 10px;
+  font-size: 12px;
+  color: #666;
+  border: none;
+  background: #f0f0f0;
+}
+.search_panel .slick-section .slick-dots li button:before {
+  content: none;
+}
+.search_panel .slick-section .slick-dots li.slick-active button {
+  background: #ccc;
+}
+
+.vacancies h4 {
+  position: relative;
+}
+.vacancies h4::after {
+  content: "";
+  position: absolute;
+  border: 1.5px solid var(--main_color);
+  height: 30px;
+  left: -10px;
+}
+.vacancies .vacancy-inner {
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+}
+.vacancies .vacancy-inner a {
+  cursor: pointer !important;
+}
+.vacancies .vacancy-inner .vacancy-item {
+  border: 1px solid var(--border_color);
+  border-radius: var(--border_radius_btn);
+  padding: 10px;
+  position: relative;
+  transition: all 0.4s ease-in-out;
+  max-width: 278px;
+}
+.vacancies .vacancy-inner .vacancy-item:hover {
+  box-shadow: 0px 2px 8px 0px;
+}
+.vacancies .vacancy-inner .vacancy-item .add-fav-btn {
+  position: absolute;
+  top: 70%;
+  right: 10%;
+  width: 35px;
+  height: 35px;
+  background-color: var(--border_color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 20px;
+}
+.vacancies .vacancy-inner .vacancy-item .vacancy-desc i {
+  font-size: 20px;
+  font-weight: bold;
+}
+.vacancies .vacancy-inner .vacancy-item .vacancy-ctgry-icon {
+  position: absolute;
+  right: 10%;
+  top: 30%;
+  width: 35px;
+  height: 35px;
+  background: var(--main_color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: white;
+  font-size: 20px;
+}
+.vacancies .vacancy-inner .vacancy-item h3 {
+  font-size: 17px;
+}
+.vacancies .vacancy-inner .vacancy-item .salary {
+  color: var(--main_color);
+  font-weight: 600;
+}
+
+.navigation {
+  margin-top: 50px;
+}
+.navigation .navigation_numbers {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+.navigation .navigation_numbers li {
+  width: 25px;
+  height: 25px;
+  background: var(--main_color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.navigation .navigation_numbers li:hover {
+  background: var(--border_color);
+  color: black;
+}
+.navigation .navigation_numbers .active {
+  background: var(--border_color);
+  color: black;
+  pointer-events: none;
+}
+
+.footer_container {
+  margin-top: 80px;
+  background: var(--border_color);
+  padding: 20px;
+}
+.footer_container a {
+  cursor: pointer !important;
+  transition: all 0.3s ease-in-out !important;
+}
+.footer_container a:hover {
+  text-decoration: underline !important;
+  color: var(--main_color) !important;
+}
+.footer_container .footer-inner {
+  display: flex;
+  margin-top: 20px;
+  gap: 10px;
+}
+.footer_container .footer-inner ul:first-child {
+  width: 45%;
+}
+.footer_container .google_play,
+.footer_container .apple_store {
+  width: 140px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 10px;
+  margin-top: 15px;
+  border-radius: var(--border_radius_btn);
+  background-color: black;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+.footer_container .google_play:hover,
+.footer_container .apple_store:hover {
+  background-color: var(--main_color);
+}
+.footer_container .google_play a,
+.footer_container .apple_store a {
+  color: white !important;
+  font-size: 13px !important;
+  text-decoration: none !important;
+}
+.footer_container .google_play a i,
+.footer_container .apple_store a i {
+  color: white;
+  margin-right: 4px !important;
+  font-size: 18px;
+}
+
+.rights {
+  background-color: var(--main_color);
+  text-align: center;
+  font-weight: 500;
+}
+
+:root {
+  --main_color: rgb(19, 241, 19);
+  --border_radius_btn: 10px;
+  --font_family: "Montserrat", sans-serif;
+  --border_color: rgb(228, 228, 228);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: var(--font_family);
+  box-sizing: border-box;
+}
+
+::-moz-selection {
+  color: black;
+  background: var(--main_color);
+}
+
+::selection {
+  color: black;
+  background: var(--main_color);
+}
+
+a {
+  all: unset !important;
+}
+
+ul {
+  list-style: none;
+}
+
+.dark_body {
+  background-color: rgb(14, 14, 26);
+}/*# sourceMappingURL=style.css.map */
