@@ -152,7 +152,7 @@
   }
 
   .slick-section-mobile {
-  display: none;
+    display: none;
     padding: 25px;
     text-align: center;
     overflow: hidden;
@@ -257,11 +257,14 @@
   }
 }
 
-
-@media screen and (max-width:995px) {
-
+@media screen and (max-width: 995px) {
   .slick-section-mobile {
     display: block !important;
+
+    .slick-item {
+      padding: 5px !important;
+      height: 152px !important;
+    }
   }
   .slick-section {
     display: none;
@@ -269,15 +272,13 @@
   .vacancy-inner {
     justify-content: center !important;
   }
-  .vacancies .container{
-    text-align: center  !important;
+  .vacancies .container {
+    text-align: center !important;
   }
-  .search_panel .container{
+  .search_panel .container {
     text-align: center;
   }
-  h4{
-   display: inline-block !important;
+  h4 {
+    display: inline-block !important;
   }
-
-  
 }
