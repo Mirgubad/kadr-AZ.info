@@ -8,14 +8,14 @@ $(".slick-wrap").on("init", function (event, slick) {
   });
 });
 
-
-
 $(".slick-wrap").slick({
   focusOnSelect: true,
   infinite: true,
   arrows: true,
-  prevArrow:"<button class='slick-prev slick-arrow'  type='button' ><i class='fas fa-angle-left'></i></button>",
-  nextArrow:"<button class='slick-next slick-arrow'  type='button' ><i class='fas fa-angle-right'></i></button>",
+  prevArrow:
+    "<button class='slick-prev slick-arrow'  type='button' ><i class='fas fa-angle-left'></i></button>",
+  nextArrow:
+    "<button class='slick-next slick-arrow'  type='button' ><i class='fas fa-angle-right'></i></button>",
   speed: 300,
   slidesToShow: 4,
   slidesToScroll: 1,
@@ -27,15 +27,16 @@ $(".slick-wrap-mobile").slick({
   focusOnSelect: true,
   infinite: true,
   arrows: true,
-  prevArrow:"<button class='slick-prev slick-arrow'  type='button' ><i class='fas fa-angle-left'></i></button>",
-  nextArrow:"<button class='slick-next slick-arrow'  type='button' ><i class='fas fa-angle-right'></i></button>",
+  prevArrow:
+    "<button class='slick-prev slick-arrow'  type='button' ><i class='fas fa-angle-left'></i></button>",
+  nextArrow:
+    "<button class='slick-next slick-arrow'  type='button' ><i class='fas fa-angle-right'></i></button>",
   speed: 300,
   slidesToShow: 2,
   slidesToScroll: 1,
   centerMode: true,
   centerPadding: "30px",
 });
-
 
 var searchBtn = document.getElementById("search_btn");
 var searchPanel = document.querySelector(".search");
@@ -51,7 +52,16 @@ $("#search_btn").click(function () {
   }
 });
 
-$(".change_theme").click(function () {
+(function checkDarkMode() {
+  var checkDarkMode = localStorage.getItem("darkMode");
+  if (checkDarkMode) {
+    toggleDarkMode()
+  }
+})();
+$(".change_theme").click(toggleDarkMode);
+
+function toggleDarkMode() {
+  var darkMode = "dark_body";
   $("body").toggleClass("dark_body");
   $(".logo").toggleClass("text-light");
   $("h4").toggleClass("text-light");
@@ -63,7 +73,9 @@ $(".change_theme").click(function () {
 
   if ($("body").hasClass("dark_body")) {
     $(this).html(`<i class="fa-solid fa-sun"></i>`);
+    localStorage.setItem("darkMode", darkMode);
   } else {
     $(this).html(`<i class="fas fa-moon"></i>`);
+    localStorage.removeItem("darkMode", darkMode);
   }
-});
+}
