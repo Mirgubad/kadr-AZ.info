@@ -15,10 +15,108 @@
         margin-right: 10px !important;
         font-size: 15px !important;
 
-        &:hover{
-            text-decoration: underline !important;
-            cursor: pointer !important;
+        &:hover {
+          text-decoration: underline !important;
+          cursor: pointer !important;
         }
+      }
+    }
+  }
+}
+
+.vacancy-details {
+  .details-top {
+    display: flex;
+    padding: 20px;
+    justify-content: space-between;
+    align-items: center;
+
+    .details-icon {
+      font-size: 50px;
+      font-weight: 200;
+      width: 130px;
+      height: 130px;
+      background: var(--main_color);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .details-desc {
+      a {
+        display: flex !important;
+        align-items: center !important;
+        gap: 10px !important;
+
+        i {
+          color: var(--main_color);
+          font-size: 25px;
+        }
+      }
+
+      p {
+        color: var(--main_color);
+        font-weight: 500;
+        font-size: 19px;
+      }
+      h4 {
+        font-size: 22px;
+      }
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+    .add-fav-btn {
+      font-size: 25px;
+
+      &:hover {
+        color: red;
+        cursor: pointer;
+      }
+    }
+    p {
+      align-self: flex-start;
+    }
+  }
+}
+
+.company-details {
+  background: var(--border_color);
+  padding: 20px;
+  &-container {
+    display: flex;
+    justify-content: space-between;
+
+    li {
+      margin-top: 15px;
+
+      a {
+        color:green !important;
+        cursor: pointer !important;
+        font-weight: 500 !important;
+      }
+
+      span:last-child {
+        font-weight: 500;
+      }
+    }
+
+    button {
+      all: unset;
+      padding: 5px 10px;
+      border: 1.5px solid var(--main_color);
+      border-radius: var(--border_radius_btn);
+      color: green;
+      transition: background 0.3s ease-in-out;
+
+      i {
+        margin-right: 5px;
+      }
+
+      &:hover {
+        background-color: white;
+        color: var(--main_color);
       }
     }
   }

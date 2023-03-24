@@ -1,9 +1,15 @@
 .header {
   padding: 20px;
+  // position: sticky;
+  // top: 0;
+  // z-index: 9999;
+  // background: white;
+  margin-bottom: 30px;
   ul {
     justify-content: space-between;
     display: flex;
     align-items: center;
+    padding: 0;
   }
   button {
     padding: 10px 15px;
@@ -57,6 +63,14 @@
   }
 }
 
+
+.nav-scrolled{
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 999;
+  transition: top 2s ease-in-out;
+}
 @media screen and (max-width: 770px) {
   .header {
     ul {

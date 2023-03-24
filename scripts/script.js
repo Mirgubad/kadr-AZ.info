@@ -70,6 +70,7 @@ function toggleDarkMode() {
   $(".add-fav-btn").toggleClass("text-dark");
   $("#search_btn").toggleClass("bg-light text-dark");
   $(".wish-list").toggleClass("bg-light text-dark");
+  $(".header").toggleClass("dark_body text-dark");
   $(this).toggleClass("text-dark bg-light");
 
   if ($("body").hasClass("dark_body")) {
@@ -80,3 +81,15 @@ function toggleDarkMode() {
     localStorage.removeItem("darkMode", darkMode);
   }
 }
+
+
+var myNav = document.querySelector('.header');
+window.onscroll = function () { 
+var scrollSize=document.documentElement.scrollTop;
+    if (scrollSize >= 200 ) {
+        myNav.classList.add("nav-scrolled");
+    } 
+    else {
+        myNav.classList.remove("nav-scrolled");
+    }
+};

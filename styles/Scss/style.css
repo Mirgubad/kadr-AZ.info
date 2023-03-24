@@ -1,10 +1,12 @@
 .header {
   padding: 20px;
+  margin-bottom: 30px;
 }
 .header ul {
   justify-content: space-between;
   display: flex;
   align-items: center;
+  padding: 0;
 }
 .header button {
   padding: 10px 15px;
@@ -50,6 +52,14 @@
   background-color: white;
   color: black;
   border-color: rgb(201, 204, 202);
+}
+
+.nav-scrolled {
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 999;
+  transition: top 2s ease-in-out;
 }
 
 @media screen and (max-width: 770px) {
@@ -557,6 +567,91 @@
 .breadcrumb .breadcrumb-container ul a:hover {
   text-decoration: underline !important;
   cursor: pointer !important;
+}
+
+.vacancy-details .details-top {
+  display: flex;
+  padding: 20px;
+  justify-content: space-between;
+  align-items: center;
+}
+.vacancy-details .details-top .details-icon {
+  font-size: 50px;
+  font-weight: 200;
+  width: 130px;
+  height: 130px;
+  background: var(--main_color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.vacancy-details .details-top .details-desc {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.vacancy-details .details-top .details-desc a {
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+}
+.vacancy-details .details-top .details-desc a i {
+  color: var(--main_color);
+  font-size: 25px;
+}
+.vacancy-details .details-top .details-desc p {
+  color: var(--main_color);
+  font-weight: 500;
+  font-size: 19px;
+}
+.vacancy-details .details-top .details-desc h4 {
+  font-size: 22px;
+}
+.vacancy-details .details-top .add-fav-btn {
+  font-size: 25px;
+}
+.vacancy-details .details-top .add-fav-btn:hover {
+  color: red;
+  cursor: pointer;
+}
+.vacancy-details .details-top p {
+  align-self: flex-start;
+}
+
+.company-details {
+  background: var(--border_color);
+  padding: 20px;
+}
+.company-details-container {
+  display: flex;
+  justify-content: space-between;
+}
+.company-details-container li {
+  margin-top: 15px;
+}
+.company-details-container li a {
+  color: green !important;
+  cursor: pointer !important;
+  font-weight: 500 !important;
+}
+.company-details-container li span:last-child {
+  font-weight: 500;
+}
+.company-details-container button {
+  all: unset;
+  padding: 5px 10px;
+  border: 1.5px solid var(--main_color);
+  border-radius: var(--border_radius_btn);
+  color: green;
+  transition: background 0.3s ease-in-out;
+}
+.company-details-container button i {
+  margin-right: 5px;
+}
+.company-details-container button:hover {
+  background-color: white;
+  color: var(--main_color);
 }
 
 :root {
