@@ -1,0 +1,25 @@
+.breadcrumb {
+  display: unset !important;
+  .breadcrumb-container {
+    background-color: var(--main_color);
+    width: 100%;
+
+    ul {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center !important;
+      gap: 10px;
+      height: 60px;
+
+      a {
+        margin-right: 10px !important;
+        font-size: 15px !important;
+
+        &:hover{
+            text-decoration: underline !important;
+            cursor: pointer !important;
+        }
+      }
+    }
+  }
+}

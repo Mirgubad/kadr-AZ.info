@@ -48,6 +48,24 @@
       }
     }
   }
+  .social-media {
+    font-size: 30px;
+    display: flex;
+    gap: 20px;
+  }
+  .instagram {
+    color: red !important;
+  }
+  .facebook,
+  .linkedin {
+    color: blue !important;
+  }
+  .contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
 .rights {
   background-color: var(--main_color);
@@ -57,13 +75,18 @@
 
 @media screen and (max-width: 790px) {
   .footer_container {
-
     .footer-inner {
       flex-direction: column-reverse;
       justify-content: center;
       align-items: center;
-text-align: center;
-      
+      text-align: center;
     }
+  }
+
+  .contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 }

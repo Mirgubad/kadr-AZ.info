@@ -40,13 +40,13 @@
   color: var(--main_color);
 }
 
-.change_theme {
+.change_theme, .wish-list {
   background: rgb(201, 204, 202);
 }
-.change_theme i {
+.change_theme i, .wish-list i {
   font-size: 20px;
 }
-.change_theme:hover {
+.change_theme:hover, .wish-list:hover {
   background-color: white;
   color: black;
   border-color: rgb(201, 204, 202);
@@ -497,6 +497,24 @@
   margin-right: 4px !important;
   font-size: 18px;
 }
+.footer_container .social-media {
+  font-size: 30px;
+  display: flex;
+  gap: 20px;
+}
+.footer_container .instagram {
+  color: red !important;
+}
+.footer_container .facebook,
+.footer_container .linkedin {
+  color: blue !important;
+}
+.footer_container .contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
 .rights {
   background-color: var(--main_color);
@@ -511,7 +529,36 @@
     align-items: center;
     text-align: center;
   }
+  .contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
+.breadcrumb {
+  display: unset !important;
+}
+.breadcrumb .breadcrumb-container {
+  background-color: var(--main_color);
+  width: 100%;
+}
+.breadcrumb .breadcrumb-container ul {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center !important;
+  gap: 10px;
+  height: 60px;
+}
+.breadcrumb .breadcrumb-container ul a {
+  margin-right: 10px !important;
+  font-size: 15px !important;
+}
+.breadcrumb .breadcrumb-container ul a:hover {
+  text-decoration: underline !important;
+  cursor: pointer !important;
+}
+
 :root {
   --main_color: rgb(19, 241, 19);
   --border_radius_btn: 10px;

@@ -69,6 +69,7 @@ function toggleDarkMode() {
   $(".slick-inner").toggleClass("text-light");
   $(".add-fav-btn").toggleClass("text-dark");
   $("#search_btn").toggleClass("bg-light text-dark");
+  $(".wish-list").toggleClass("bg-light text-dark");
   $(this).toggleClass("text-dark bg-light");
 
   if ($("body").hasClass("dark_body")) {
