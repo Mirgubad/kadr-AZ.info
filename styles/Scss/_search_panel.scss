@@ -3,15 +3,32 @@
     background-color: var(--main_color);
     border-radius: var(--border_radius_btn);
     display: none;
+    position: fixed;
+    left: 0;
+    top: 90px;
+    z-index: 9999;
+    width: 100%;
+   
+
 
     .search-container {
       width: 100%;
       text-align: center;
-      height: 100px;
+      height: 120px;
       display: flex;
       align-items: center;
       justify-content: center;
       gap: 20px;
+      position: relative;
+
+      .search_close_btn{
+        all: unset;
+        color: white;
+        font-size: 20px;
+        position: absolute;
+        bottom: 0;
+        cursor: pointer;
+      }
     }
     form {
       display: flex;
@@ -46,7 +63,9 @@
       height: 30px;
       left: -10px;
     }
+
   }
+
   .slick-section {
     padding: 25px;
     text-align: center;
@@ -280,5 +299,9 @@
   }
   h4 {
     display: inline-block !important;
+  }
+
+  .search{
+    height: 300px;
   }
 }

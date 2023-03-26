@@ -29,7 +29,7 @@
       border-color: var(--main_color);
     }
   }
-  #search_btn {
+  .search_btn.desk {
     background-color: rgb(201, 204, 202);
 
     &:hover {
@@ -102,15 +102,32 @@
   }
 }
 
-@media screen and (max-width: 580px) {
+@media screen and (max-width: 600px) {
   .header {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    padding-top: 30px;
     .logo {
-      font-size: 20px !important;
+      font-size: 30px !important;
     }
     button {
       span {
         display: none;
       }
     }
+
+    #add_btn,
+    .wish-list{
+      display: none;
+    }
+    .search_btn.desk
+    {
+      display: none;
+    }
+  }
+
+  .search{
+    top: 60px !important;
   }
 }

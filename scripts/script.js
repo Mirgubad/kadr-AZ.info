@@ -9,7 +9,6 @@ $(".slick-wrap").on("init", function (event, slick) {
 });
 
 $(".slick-wrap").slick({
-  focusOnSelect: true,
   infinite: true,
   arrows: true,
   prevArrow:
@@ -18,13 +17,12 @@ $(".slick-wrap").slick({
     "<button class='slick-next slick-arrow'  type='button' ><i class='fas fa-angle-right'></i></button>",
   speed: 300,
   slidesToShow: 4,
-  slidesToScroll: 1,
-  centerMode: true,
+  slidesToScroll: 3,
   centerPadding: "30px",
+
 });
 
 $(".slick-wrap-mobile").slick({
-  focusOnSelect: true,
   infinite: true,
   arrows: true,
   prevArrow:
@@ -33,29 +31,33 @@ $(".slick-wrap-mobile").slick({
     "<button class='slick-next slick-arrow'  type='button' ><i class='fas fa-angle-right'></i></button>",
   speed: 300,
   slidesToShow: 2,
-  slidesToScroll: 1,
-  centerMode: true,
+  slidesToScroll:2,
   centerPadding: "30px",
+  swipeToSlide:true,
 });
 
-var searchBtn = document.getElementById("search_btn");
+var searchBtn = document.querySelector(".search_btn");
 var searchPanel = document.querySelector(".search");
 var body = document.getElementsByTagName("body");
 
-$("#search_btn").click(function () {
+$(".search_btn").click(function () {
   if (searchPanel.style.display != "block") {
     $(".search").slideDown(500);
-    $(this).html(`<i class="fa-solid fa-xmark"></i> <span>Bağla</span>`);
+    if ($(this).hasClass("desk")) {
+      $(this).html(`<i class="fa-solid fa-xmark"></i> <span>Bağla</span>`);
+    }
   } else {
     $(".search").slideUp(500);
-    $(this).html(`<i class="fas fa-search"></i> <span>Saytda Axtarış</span>`);
+    if ($(this).hasClass("desk")) {
+      $(this).html(`<i class="fas fa-search"></i> <span>Saytda Axtarış</span>`);
+    }
   }
 });
 
 (function checkDarkMode() {
   var checkDarkMode = localStorage.getItem("darkMode");
   if (checkDarkMode) {
-    toggleDarkMode()
+    toggleDarkMode();
   }
 })();
 $(".change_theme").click(toggleDarkMode);
@@ -82,14 +84,21 @@ function toggleDarkMode() {
   }
 }
 
-
-var myNav = document.querySelector('.header');
-window.onscroll = function () { 
-var scrollSize=document.documentElement.scrollTop;
-    if (scrollSize >= 200 ) {
-        myNav.classList.add("nav-scrolled");
-    } 
-    else {
-        myNav.classList.remove("nav-scrolled");
-    }
+var myNav = document.querySelector(".header");
+window.onscroll = function () {
+  var scrollSize = document.documentElement.scrollTop;
+  if (scrollSize >= 200) {
+    myNav.classList.add("nav-scrolled");
+  } else {
+    myNav.classList.remove("nav-scrolled");
+  }
 };
+
+var mobileBtn = document.querySelectorAll(".mobile-buttons");
+
+mobileBtn.forEach((button) => {
+  $(button).click(function () {
+    $(mobileBtn).removeClass("active");
+    $(this).addClass("active");
+  });
+});

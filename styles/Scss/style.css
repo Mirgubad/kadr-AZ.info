@@ -25,10 +25,10 @@
   color: var(--main_color);
   border-color: var(--main_color);
 }
-.header #search_btn {
+.header .search_btn.desk {
   background-color: rgb(201, 204, 202);
 }
-.header #search_btn:hover {
+.header .search_btn.desk:hover {
   background-color: white;
   color: black;
   border-color: rgb(201, 204, 202);
@@ -86,27 +86,57 @@
     padding: 20px;
   }
 }
-@media screen and (max-width: 580px) {
+@media screen and (max-width: 600px) {
+  .header {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    padding-top: 30px;
+  }
   .header .logo {
-    font-size: 20px !important;
+    font-size: 30px !important;
   }
   .header button span {
     display: none;
+  }
+  .header #add_btn,
+  .header .wish-list {
+    display: none;
+  }
+  .header .search_btn.desk {
+    display: none;
+  }
+  .search {
+    top: 60px !important;
   }
 }
 .search_panel .search {
   background-color: var(--main_color);
   border-radius: var(--border_radius_btn);
   display: none;
+  position: fixed;
+  left: 0;
+  top: 90px;
+  z-index: 9999;
+  width: 100%;
 }
 .search_panel .search .search-container {
   width: 100%;
   text-align: center;
-  height: 100px;
+  height: 120px;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 20px;
+  position: relative;
+}
+.search_panel .search .search-container .search_close_btn {
+  all: unset;
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  bottom: 0;
+  cursor: pointer;
 }
 .search_panel .search form {
   display: flex;
@@ -353,6 +383,9 @@
   }
   h4 {
     display: inline-block !important;
+  }
+  .search {
+    height: 300px;
   }
 }
 .vacancies h4 {
@@ -654,6 +687,49 @@
   color: var(--main_color);
 }
 
+.mobile-bottom-nav {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  z-index: 9999;
+  width: 100%;
+}
+.mobile-bottom-nav .bottom-nav {
+  position: relative;
+  height: 50px;
+  width: 100%;
+  background: white;
+}
+.mobile-bottom-nav .bottom-nav ul {
+  height: 100%;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.mobile-bottom-nav .bottom-nav ul li {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.mobile-bottom-nav .bottom-nav ul li a {
+  font-size: 20px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+}
+.mobile-bottom-nav .bottom-nav ul li span {
+  font-size: 10px;
+}
+.mobile-bottom-nav .active {
+  color: green !important;
+}
+
+@media screen and (max-width: 600px) {
+  .mobile-bottom-nav {
+    display: block;
+  }
+}
 :root {
   --main_color: rgb(19, 241, 19);
   --border_radius_btn: 10px;
