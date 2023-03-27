@@ -5,7 +5,7 @@
     display: none;
     position: fixed;
     left: 0;
-    top: 90px;
+    top: 80px;
     z-index: 9999;
     width: 100%;
    
@@ -23,6 +23,7 @@
 
       .search_close_btn{
         all: unset;
+        display: none;
         color: white;
         font-size: 20px;
         position: absolute;

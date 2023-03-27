@@ -19,7 +19,6 @@ $(".slick-wrap").slick({
   slidesToShow: 4,
   slidesToScroll: 3,
   centerPadding: "30px",
-
 });
 
 $(".slick-wrap-mobile").slick({
@@ -31,9 +30,9 @@ $(".slick-wrap-mobile").slick({
     "<button class='slick-next slick-arrow'  type='button' ><i class='fas fa-angle-right'></i></button>",
   speed: 300,
   slidesToShow: 2,
-  slidesToScroll:2,
+  slidesToScroll: 2,
   centerPadding: "30px",
-  swipeToSlide:true,
+  swipeToSlide: true,
 });
 
 var searchBtn = document.querySelector(".search_btn");
@@ -54,14 +53,14 @@ $(".search_btn").click(function () {
   }
 });
 
-(function checkDarkMode() {
-  var checkDarkMode = localStorage.getItem("darkMode");
-  if (checkDarkMode) {
+function checkDarkMode() {
+  var darkModeIsActive = localStorage.getItem("darkMode");
+  if (darkModeIsActive) {
     toggleDarkMode();
   }
-})();
+};
+checkDarkMode()
 $(".change_theme").click(toggleDarkMode);
-
 function toggleDarkMode() {
   var darkMode = "dark_body";
   $("body").toggleClass("dark_body");
@@ -76,21 +75,32 @@ function toggleDarkMode() {
   $(this).toggleClass("text-dark bg-light");
 
   if ($("body").hasClass("dark_body")) {
-    $(this).html(`<i class="fa-solid fa-sun"></i>`);
+    $(".change_theme").html(`<i class="fa-solid fa-sun"></i>`);
     localStorage.setItem("darkMode", darkMode);
   } else {
-    $(this).html(`<i class="fas fa-moon"></i>`);
+    $(".change_theme").html(`<i class="fas fa-moon"></i>`);
     localStorage.removeItem("darkMode", darkMode);
   }
 }
 
-var myNav = document.querySelector(".header");
+$(mobileNav).css("display", "block");
+
+var myNav = document.querySelector(".header-fixed");
+var mobileNav = document.querySelector(".mobile-bottom-nav");
+
 window.onscroll = function () {
   var scrollSize = document.documentElement.scrollTop;
+  var breakPoint = document.body.clientWidth;
   if (scrollSize >= 200) {
-    myNav.classList.add("nav-scrolled");
-  } else {
-    myNav.classList.remove("nav-scrolled");
+    $(myNav).slideDown()
+
+    if (breakPoint <= 770 && scrollSize >= 200) {
+      $(mobileNav).slideDown();
+      
+    } 
+  }else {
+    $(mobileNav).slideUp();
+    $(myNav).slideUp()
   }
 };
 
