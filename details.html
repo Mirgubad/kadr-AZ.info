@@ -41,23 +41,105 @@
   </head>
   <body>
     <!-- Header Section start -->
-    <div class="header">
-      <div class="container">
-        <ul>
-          <li>
-            <a class="logo" href="index.html">Kadr-Az<span>.Info</span></a>
-          </li>
-          <li>
-            <button id="add_btn">
-              <i class="fas fa-plus-circle"></i><span> Elan yerləşdir</span>
-            </button>
-            <button class="wish-list"><i class="fas fa-heart"></i></button>
-            <button class="change_theme"><i class="fas fa-moon"></i></button>
-          </li>
-        </ul>
+    <header class="headers">
+      <div class="base-header">
+        <div class="container">
+          <ul>
+            <li>
+              <a title="Kadr-az.info" class="logo" href="./index.html"
+                >Kadr-Az<span>.Info</span></a
+              >
+            </li>
+            <li>
+              <button title="Axtarış" class="search_btn desk">
+                <i class="fas fa-search"></i> <span>Saytda Axtarış</span>
+              </button>
+              <button title="Yeni Elan" class="add-vacancy-btn" id="add_btn">
+                <i class="fas fa-plus-circle"></i><span> Elan yerləşdir</span>
+              </button>
+              <button title="Bəyəndiyim" class="wish-list">
+                <i class="fas fa-heart"></i>
+              </button>
+              <button title="Rəng Rejimi" class="change_theme">
+                <i class="fas fa-moon"></i>
+              </button>
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
+
+      <div class="header-fixed">
+        <div class="header-sticky">
+          <div class="container">
+            <ul>
+              <li>
+                <a title="Kadr-az.info" class="logo" href=""
+                  >Kadr-Az<span>.Info</span></a
+                >
+              </li>
+              <li>
+                <button title="Axtarış" class="search_btn desk">
+                  <i class="fas fa-search"></i> <span>Saytda Axtarış</span>
+                </button>
+                <button title="Yeni Elan" class="add-vacancy-btn" id="add_btn">
+                  <i class="fas fa-plus-circle"></i><span> Elan yerləşdir</span>
+                </button>
+                <button title="Bəyəndiyim" class="wish-list">
+                  <i class="fas fa-heart"></i>
+                </button>
+                <button title="Rəng Rejimi" class="change_theme">
+                  <i class="fas fa-moon"></i>
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
     <!-- Header Section end -->
+
+    <!-- Mobile bottom nav start -->
+    <section class="mobile-bottom-nav">
+      <div class="bottom-nav-container">
+        <div class="bottom-nav">
+          <ul>
+            <li>
+              <a
+                title="Vakansiyalar"
+                class="mobile-buttons active"
+                href="index.html"
+                ><i class="fas fa-home"></i></a
+              ><span>Vakansiyalar</span>
+            </li>
+            <li>
+              <a title="Kateqoriyalar" class="mobile-buttons"
+                ><i class="fas fa-cubes"></i
+              ></a>
+              <span>Kateqoriyalar</span>
+            </li>
+            <li>
+              <a title="Yeni Elan" class="mobile-buttons add-vacancy-btn"
+                ><i class="fas fa-plus-circle"></i><span>Yeni elan</span></a
+              >
+            </li>
+            <li>
+              <a title="Axtarış" class="search_btn mob mobile-buttons"
+                ><i class="fas fa-search"></i
+              ></a>
+              <span>Axtarış</span>
+            </li>
+
+            <li>
+              <a title="Seçilmişlər" class="mobile-buttons wish-list"
+                ><i class="fas fa-heart"></i
+              ></a>
+              <span>Seçilmişlər</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <!-- Mobile bottom nav end -->
 
     <!-- Details breadcrumb start -->
     <section class="breadcrumb">
@@ -99,20 +181,16 @@
             </div>
             <p>Elan № 12670</p>
           </div>
-
-    
         </div>
         <div class="company-details">
-            <div class="container">
-          <div class="company-details-container">
+          <div class="container">
+            <div class="company-details-container">
               <ul>
                 <li>
                   <span>Şəhər:</span>
                   <a href="">Bakı</a>
                 </li>
-                <li>
-                  <span>İş rejimi:</span><a href="">Tam-ştat</a>
-                </li>
+                <li><span>İş rejimi:</span><a href="">Tam-ştat</a></li>
                 <li>
                   <span>Müraciət linki:</span>
                   <a href="">Göstər</a>
@@ -131,9 +209,7 @@
                   <button>
                     <i class="fas fa-long-arrow-up"></i>Elanı irəli çək
                   </button>
-                  <button>
-                    <i class="fas fa-crown"></i>Elanı premium et
-                  </button>
+                  <button><i class="fas fa-crown"></i>Elanı premium et</button>
                 </li>
               </ul>
               <ul>
@@ -146,6 +222,147 @@
                   <span>22 Aprel</span>
                 </li>
               </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="work-info">
+          <div class="container">
+            <div class="work-info-inner">
+              <ul>
+                <h5>İş barədə məlumat</h5>
+                <li>
+                  Təhlükəsizlik riskləri və təhdidlərini aşkarlamaq məqsədilə
+                  təhlükəsizlik hallarının monitorinqi və analizinin aparılması
+                  üçün müxtəlif təhlükəsizlik və monitorinq vasitələrindən
+                  istifadə etmək;
+                </li>
+                <li>İnsidentlərin mövcudluğunu yoxlamaq;</li>
+                <li>
+                  Son istifadəçilər tərəfindən email vasitəsilə daxil olan
+                  həyacanları nəzərdən keçirmək və sorğu açmaq;
+                </li>
+                <li>
+                  Daxil olan sorğuların birinci dərəcəli çeşidlənməsini
+                  aparmaq(hadisənin prioritetliyinin ilkin qiymətləndirilməsi,
+                  risk və zədələrin müəyyən edilməsi və ya təhlükəsizlik və ya
+                  məxfi məlumat sorğusunun müəyyən edilməsi məqsədilə insidentin
+                  ilkin aşkarlanması);
+                </li>
+                <li>İlkin tədqiqat aparmaq;</li>
+                <li>
+                  Həyacanların və onlara asılı olan sistemlərin monitorinqini
+                  aparmaq;
+                </li>
+                <li>
+                  Yüksək prioritetli insidentlər haqqında L2 analitiklərini
+                  məlumatlandırmaq;
+                </li>
+                <li>İnsidentləri L2 analitiklərinə eskalasiya etmək;</li>
+                <li>
+                  İnsidentlərin həllində hətta onlar artıq eskalasiya olunduğu
+                  təqdirdə aktiv iştirak etmək(məlumat toplama);
+                </li>
+                <li>
+                  İnsidentin idarəedilməsi prosesini dəstəkləmək üçün digər
+                  komanda heyəti ilə sıx çalışmaq;
+                </li>
+                <li>Təyin olunmuş sorğuların növbəliliyi əsasında işləmək;</li>
+                <li>Aşağı və bəzi orta dərəcəli insidentlərə cavab vermək;</li>
+                <li>
+                  Yanlış həyacanlarla bağlı mühəndislik komandasına məlumat
+                  vermək;
+                </li>
+                <li>
+                  Cari zəifliklər və təhdidlər haqqında xüsusilə, daxili
+                  sistemlərə birbaşa təsir edənlər haqqında məlumatlı olmaq;
+                </li>
+                <li>
+                  Bankın daxili qaydalarına, proseslərinə, siyasətlərinə,
+                  təlimatlarına (o cümlədən, Davranış Məcəlləsi, Maraqlar
+                  Münaqişəsi Siyasəti, SƏTƏM-lə əlaqədar olan) ciddi şəkildə
+                  əməl etmək və onların pozulmasına görə məsuliyyət daşımaq. Hər
+                  hansı qəzalar, insidentlər və təhlükəli hallar barəsində
+                  dərhal birbaşa rəhbərə məlumat vermək. Hər zaman təhlükəsiz,
+                  ətraf mühiti qoruyan və çirklənməsinin qarşısını alan qaydada
+                  işləmək;
+                </li>
+                <li>
+                  Bankın Təşkilati Risklərin İdarəedilməsinə dair siyasətinə
+                  əməl etmək. İş prosesində yaranan risk faktorlarını vaxtında
+                  müəyyənləşdirib, lazımi addımları atmaq;
+                </li>
+                <li>
+                  Birbaşa rəhbər tərəfindən verilən digər şifahi və yazılı
+                  tapşırıqlar.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="work-info">
+          <div class="container">
+            <div class="work-info-inner">
+              <ul>
+                <h5>Namizəd üçün tələblər</h5>
+                <li>
+                  Təhsil:&nbsp;İnformasiya texnologiyaları, Riyaziyyat və digər
+                  əlaqəli sahə üzrə bakalavr dərəcəsi
+                </li>
+                <li>
+                  Tələb olunan iş təcrübəsi: &nbsp;İT Əməliyyatları üzrə minimum
+                  0-1 il iş təcrübəsi
+                </li>
+                <li>
+                  Lisenziya / Sertifikat: Arzuolunan- CCNA, RHCSA, MCP, MCITP,
+                  CCNA Security, CompTIA Security+
+                </li>
+                <li>Xarici dillər: İngilis(orta),Rus dili arzuolunan(orta)</li>
+                <li>Kompüter bilikləri:</li>
+              </ul>
+              <p>- Ümumi kibertəhlükəsizlik anlayışı</p>
+              <p>-&nbsp;Ümumi desktop OS və server OS biliyi</p>
+              <p>-&nbsp;Şəbəkə protokolları (i.e. TCP/IP);</p>
+              <p>
+                -&nbsp;Təhlükəsizlik təhdidləri və zəifliklər haqqında ümumi
+                məlumat
+              </p>
+              <p>
+                -&nbsp;Active Directory, LDAP, DNS, VPN və&nbsp;DHCP haqqında
+                anlayış
+              </p>
+              <p>
+                -&nbsp;Host-based firewalls, Anti-Malware, HIDS haqqında bilik
+              </p>
+              <ul>
+                <li>Məhsul üzrə biliklər: N/A</li>
+                <li>Bazar üzrə biliklər: N/A</li>
+                <li>Başqa tələblər:</li>
+              </ul>
+              <p>-&nbsp;Güclü analitik və problemi həll etmə bacarıqları</p>
+              <p>-&nbsp;Təzyiq altında işləmək</p>
+              <p>-&nbsp;Bir komandada səmərəli işləyə bilən komanda oyunçusu</p>
+              <p>-&nbsp;Multi-tasking environment</p>
+              <p>-&nbsp;Effektiv şifahi və yazılı ünsiyyət bacarıqları</p>
+              <p>-&nbsp;Cari insidentə cavab siyasəti ilə işləmək bacarığı</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="work-apply apply-fied">
+          <div class="work-apply-container">
+            <div class="container">
+              <div class="work-apply-inner">
+              <div class="apply-left">
+                <a href="mailto:example@gmail.com" class="apply_btn"
+                >Müraciət Et</a>
+              <a class="see-number" data-number="0559911121" ><i class="fa fa-phone" aria-hidden="true"></i> <span class="phone-number">Nömrə göstər</span></a>
+              </div>
+                <a class="wish-list">
+                  <i class="fas fa-heart"> </i>Seçilmişlərə əlavə et
+                </a>
+              </div>
             </div>
           </div>
         </div>

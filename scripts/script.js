@@ -64,14 +64,15 @@ $(".change_theme").click(toggleDarkMode);
 function toggleDarkMode() {
   var darkMode = "dark_body";
   $("body").toggleClass("dark_body");
-  $(".logo").toggleClass("text-light");
-  $("h4").toggleClass("text-light");
-  $(".vacancy-item").toggleClass("text-light");
-  $(".slick-inner").toggleClass("text-light");
-  $(".add-fav-btn").toggleClass("text-dark");
-  $("#search_btn").toggleClass("bg-light text-dark");
-  $(".wish-list").toggleClass("bg-light text-dark");
-  $(".header").toggleClass("dark_body text-dark");
+  // $(".logo").toggleClass("text-light");
+  // $("h4").toggleClass("text-light");
+  // $(".vacancy-item").toggleClass("text-light");
+  // $(".slick-inner").toggleClass("text-light");
+  // $(".add-fav-btn").toggleClass("text-dark");
+  // $("#search_btn").toggleClass("bg-light text-dark");
+  // $(".wish-list").toggleClass("bg-light text-dark");
+  // $(".header").toggleClass("dark_body text-dark");
+  $(".footer_container").toggleClass('dark_body')
   $(this).toggleClass("text-dark bg-light");
 
   if ($("body").hasClass("dark_body")) {
@@ -112,3 +113,10 @@ mobileBtn.forEach((button) => {
     $(this).addClass("active");
   });
 });
+
+
+$('.see-number').click(function(){
+  var number=$(this).data("number");
+$('.phone-number').html(`${number}`)
+$(this).attr("href",`tel:${number}`)
+})

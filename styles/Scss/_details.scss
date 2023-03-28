@@ -92,7 +92,7 @@
       margin-top: 15px;
 
       a {
-        color:green !important;
+        color: green !important;
         cursor: pointer !important;
         font-weight: 500 !important;
       }
@@ -108,16 +108,132 @@
       border: 1.5px solid var(--main_color);
       border-radius: var(--border_radius_btn);
       color: green;
-      transition: background 0.3s ease-in-out;
+      position: relative;
+      overflow: hidden;
+      z-index: 9;
+      transition: color 0.3s ease-in-out;
 
       i {
         margin-right: 5px;
       }
 
       &:hover {
-        background-color: white;
-        color: var(--main_color);
+        color: white;
+      }
+      &:hover::after {
+        content: "";
+      }
+
+      &::after {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        background-color: var(--main_color);
+        height: 100%;
+        z-index: -1;
+        animation: leftToRight 0.5s;
       }
     }
   }
 }
+
+.work-info {
+  margin-top: 40px;
+  font-weight: 500;
+
+  .work-info-inner {
+    padding: 20px;
+    width: 80%;
+    margin: 0 auto;
+    border: 1px solid var(--border_color);
+    border-radius: 4px;
+
+    h5 {
+      position: relative;
+      margin-bottom: 30px;
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: -10px;
+        top: 0;
+        height: 20px;
+        border-radius: 10px;
+        border: 2.3px solid var(--main_color);
+      }
+    }
+
+    ul {
+      padding: inherit;
+      list-style: disc;
+
+      li {
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
+
+.apply-fixed {
+  box-shadow: 0px -5px 6px 0px rgba(201, 201, 201, 0.27);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: white;
+  z-index: 999;
+  width: 100% !important;
+}
+.work-apply {
+  width: 73%;
+  margin: 0 auto;
+  padding: 20px;
+
+  .work-apply-inner {
+    display: flex;
+    justify-content: space-between;
+
+    .apply-left{
+      display: flex;
+      gap: 20px;
+    }
+    a {
+      position: relative !important;
+      overflow: hidden !important;
+      padding: 10px 15px !important;
+      border-radius: var(--border_radius_btn) !important;
+      border: 1px solid var(--border_color) !important;
+      cursor: pointer !important;
+      color: var(--main_color) !important;
+      font-weight: 500 !important;
+      transition: color 0.5s ease-in-out !important;
+
+      &:hover::after {
+        content: "";
+      }
+
+      &:hover {
+        color: white !important;
+      }
+      &::after {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: var(--main_color);
+        z-index: -1;
+        animation: leftToRight 0.5s linear;
+      }
+    }
+
+    .wish-list {
+      display: flex !important;
+      gap: 15px !important;
+    }
+  }
+}
+
+
+

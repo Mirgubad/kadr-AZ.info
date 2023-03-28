@@ -116,7 +116,8 @@
         position: absolute !important;
         all: unset;
         font-size: 25px;
-        background-color: white;
+        background-color: white !important;
+        color: black !important;
         height: 40px;
         width: 40px;
         border-radius: 50%;
