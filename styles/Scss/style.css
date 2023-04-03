@@ -809,6 +809,7 @@
 .work-apply .work-apply-inner {
   display: flex;
   justify-content: space-between;
+  gap: 10px;
 }
 .work-apply .work-apply-inner .apply-left {
   display: flex;
@@ -854,6 +855,7 @@
   width: 100%;
 }
 .mobile-bottom-nav .bottom-nav {
+  overflow: hidden;
   position: relative;
   height: 50px;
   width: 100%;
@@ -865,8 +867,11 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
+  overflow: hidden;
 }
 .mobile-bottom-nav .bottom-nav ul li {
+  z-index: 0;
+  position: relative;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -876,12 +881,29 @@
   display: flex !important;
   flex-direction: column !important;
   align-items: center !important;
+  color: black !important;
 }
 .mobile-bottom-nav .bottom-nav ul li span {
   font-size: 10px;
 }
-.mobile-bottom-nav .active {
-  color: green !important;
+.mobile-bottom-nav .bottom-nav li a.active::before,
+.mobile-bottom-nav .bottom-nav li a.active::after {
+  content: "";
+  position: absolute;
+  background: var(--main_color);
+  z-index: -1;
+  animation: slideUp 0.5s linear;
+}
+.mobile-bottom-nav .bottom-nav li a.active::after {
+  top: -5px;
+  bottom: 0;
+  width: 70px;
+  height: 55px;
+  border-radius: 10px 10px 0 0;
+}
+.mobile-bottom-nav .bottom-nav ul .active {
+  color: white !important;
+  transform: all 3s ease !important;
 }
 
 :root {
@@ -927,5 +949,21 @@ ul {
   }
   to {
     transform: translateX(0);
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0.2;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
   }
 }/*# sourceMappingURL=style.css.map */

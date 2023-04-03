@@ -1,11 +1,12 @@
 .mobile-bottom-nav {
-  display: none ;
+  display: none;
   position: fixed;
   bottom: 0;
   z-index: 9999;
   width: 100%;
 
   .bottom-nav {
+    overflow: hidden;
     position: relative;
     height: 50px;
     width: 100%;
@@ -17,13 +18,17 @@
       justify-content: space-around;
       align-items: center;
 
+      overflow: hidden;
       li {
+        z-index: 0;
+        position: relative;
+
         a {
           font-size: 20px !important;
           display: flex !important;
           flex-direction: column !important;
           align-items: center !important;
-
+          color: black !important;
         }
         display: flex;
         align-items: center;
@@ -33,10 +38,61 @@
         }
       }
     }
-   
   }
-  .active {
-    color: green !important;
+
+  .bottom-nav li a.active::before,
+  .bottom-nav li a.active::after {
+    content: "";
+    position: absolute;
+    background: var(--main_color);
+    z-index: -1;
+    animation: slideUp .5s linear;
+  }
+
+
+  // .bottom-nav ul li::after{
+  //   content: '';
+  //   position: absolute;
+  //  background: red;
+  //  bottom: -7px;
+  //  right: -11px;
+  //  height: 150%;
+  //  width: 10px;
+  //  border-radius: 0 0 0 60px;
+  // }
+  // .bottom-nav ul li::before{
+  //   content: '';
+  //   position: absolute;
+  //  background: red;
+  //  bottom:-8px;
+  //  left: -20px;
+  //  height: 150%;
+  //  width: 20px;
+  //  border-radius: 0 0 50px 0;
+  // }
+ 
+
+  .bottom-nav li a.active::after {
+    top: -5px;
+    bottom: 0;
+    width: 70px;
+    height: 55px;
+    border-radius: 10px 10px 0 0;
+  }
+
+  .bottom-nav ul .active {
+    color: white !important;
+    transform: all 3s ease !important;
+
+    // &::after {
+    //   content: "";
+    //   position: absolute;
+    //   top: -5px;
+    //   left: 50%;
+    //   transform: translate(-50%, -50%);
+    //   border: 2px solid green;
+    //   width: 50px;
+    // }
   }
 }
 
